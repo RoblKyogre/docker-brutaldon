@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y \
 # init project
 RUN git clone -b main https://gitlab.com/brutaldon/brutaldon.git /app
 WORKDIR /app
-RUN npm install
 RUN pip install pipenv
 ENV PIPENV_VENV_IN_PROJECT=1
 RUN pipenv install
