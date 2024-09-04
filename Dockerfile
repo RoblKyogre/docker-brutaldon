@@ -3,12 +3,12 @@ FROM python:slim
 RUN apt-get update && apt-get install -y \
   git \
   ca-certificates \
-  build-essential \
-  npm
+  build-essential
 
 # init project
 RUN git clone -b main https://gitlab.com/brutaldon/brutaldon.git /app
 WORKDIR /app
+RUN npm install
 RUN pip install pipenv
 ENV PIPENV_VENV_IN_PROJECT=1
 RUN pipenv install
