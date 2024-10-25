@@ -14,7 +14,7 @@ RUN pipenv install
 
 # adjust settings for docker deployment
 COPY container.patch /container.patch
-RUN git apply /container.patch
+RUN git apply /container.patch && rm /container.patch
 
 COPY entrypoint.sh /entrypoint.sh
 EXPOSE 8000
