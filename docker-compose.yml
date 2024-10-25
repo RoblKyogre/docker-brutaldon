@@ -12,7 +12,7 @@ services:
       TZ: "UTC"
       LANGUAGE_CODE: "en-us"
       SECRET_KEY: "CHANGE_ME_PLEASE"
-      ALLOWED_HOSTS: "127.0.0.1,::1"
+      ALLOWED_ORIGINS: "http://127.0.0.1,https://domain.here"
       DB_PATH: "/data/db.sqlite3"
     ports:
       - 8000:8000
